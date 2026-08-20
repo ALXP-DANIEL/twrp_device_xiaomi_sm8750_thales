@@ -1,4 +1,4 @@
-on property:twrp.variant.files_copied=1
+on post-fs
     ######## Add by jason
     # 使用 write 命令直接写入 /dev/kmsg，避免 SELinux 问题
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
