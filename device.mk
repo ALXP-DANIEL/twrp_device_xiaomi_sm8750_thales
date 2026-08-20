@@ -38,6 +38,24 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 TWRP_REQUIRED_MODULES += \
     prebuilt
 
+# Piano NT36532 touchscreen firmware and touch-report userspace stack.
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/MP_Setting_Criteria_59B0.csv:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/MP_Setting_Criteria_59B0.csv \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/MP_Setting_Criteria_59BB.csv:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/MP_Setting_Criteria_59BB.csv \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/film_model.tflite:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/film_model.tflite \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/novatek_nt36532_piano_fw_boe.bin:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/novatek_nt36532_piano_fw_boe.bin \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/novatek_nt36532_piano_fw_csot.bin:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/novatek_nt36532_piano_fw_csot.bin \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/novatek_nt36532_piano_mp_boe.bin:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/novatek_nt36532_piano_mp_boe.bin \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/novatek_nt36532_piano_mp_csot.bin:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/novatek_nt36532_piano_mp_csot.bin \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/palm_check.tflite:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/palm_check.tflite \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/piano_nova_boe_thp_config.ini:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/piano_nova_boe_thp_config.ini \
+    $(DEVICE_PATH)/recovery/root/odm/firmware/piano_nova_csot_thp_config.ini:$(TARGET_COPY_OUT_RECOVERY)/root/odm/firmware/piano_nova_csot_thp_config.ini \
+    $(DEVICE_PATH)/recovery/root/odm/lib64/libtouchreport.so:$(TARGET_COPY_OUT_RECOVERY)/root/odm/lib64/libtouchreport.so \
+    $(DEVICE_PATH)/recovery/root/odm/lib64/libtouchreport_alg.so:$(TARGET_COPY_OUT_RECOVERY)/root/odm/lib64/libtouchreport_alg.so \
+    $(DEVICE_PATH)/recovery/root/odm/lib64/libtouchreport_hal.so:$(TARGET_COPY_OUT_RECOVERY)/root/odm/lib64/libtouchreport_hal.so \
+    $(DEVICE_PATH)/recovery/root/odm/lib64/libtouchreport_sensor.so:$(TARGET_COPY_OUT_RECOVERY)/root/odm/lib64/libtouchreport_sensor.so \
+    $(DEVICE_PATH)/recovery/root/odm/lib64/sensors.touch.detect.so:$(TARGET_COPY_OUT_RECOVERY)/root/odm/lib64/sensors.touch.detect.so
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
